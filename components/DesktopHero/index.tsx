@@ -49,7 +49,7 @@ const LeftSection = styled.div`
     align-items: center;
     width: 100%;
     left: 0px;
-    bottom: 120px;
+    bottom: 160px;
   }
 `;
 

@@ -4,8 +4,8 @@ import { DesktopMenu } from "@/components/DesktopMenu";
 import { DesktopHero } from "@/components/DesktopHero";
 
 import lamborghiniHero from "@/public/Lamborghini_hero.jpg";
-import lamborghiniGarage from "@/public/LamborghiniGarage.jpg";
-import lamborghiniBack from "@/public/Lamborghiniback.jpg";
+import lamborghiniGarage from "@/public/lamborghiniGarage.jpg";
+import lamborghiniBack from "@/public/lamborghiniback.jpg";
 import { MobileMenu } from "@/components/MobileMenu";
 import { Box } from "@/components/DesktopHero/Box";
 import { LamborghiniIcon } from "@/components/Icon/lamborghini";

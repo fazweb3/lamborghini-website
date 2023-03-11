@@ -16,7 +16,7 @@ const ubuntu = Dosis({
 const Container = styled.div`
   display: flex;
   position: relative;
-  min-height: 100vh;
+  min-height: 100%;
   scroll-snap-align: center;
 `;
 

@@ -12,7 +12,7 @@ import { HatIcon } from "../Icon/hat";
 const Container = styled.div`
   @media only screen and (max-width: 650px) {
     position: absolute;
-    bottom: 40px;
+    bottom: 10px;
     left: 0px;
     right: 0px;
     z-index: 120;

@@ -1,91 +1,208 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+"use client";
 
-const inter = Inter({ subsets: ['latin'] })
+import { DesktopMenu } from "@/components/DesktopMenu";
+import { DesktopHero } from "@/components/DesktopHero";
+
+import lamborghiniHero from "../public/Lamborghini_hero.jpg";
+import lamborghiniGarage from "../public/LamborghiniGarage.jpg";
+import lamborghiniBack from "../public/Lamborghiniback.jpg";
+import { MobileMenu } from "@/components/MobileMenu";
+import { Box } from "@/components/DesktopHero/Box";
+import { LamborghiniIcon } from "@/components/Icon/lamborghini";
+import { BuildIcon } from "@/components/Icon/build";
+import { BullIcon } from "@/components/Icon/bull";
+import { RocketIcon } from "@/components/Icon/rocket";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    <>
+      <DesktopMenu />
+      <MobileMenu />
+      <div
+        style={{
+          height: "100vh",
+          overflowY: "scroll",
+          scrollSnapType: "y mandatory",
+        }}
+      >
+        <DesktopHero
+          img={lamborghiniHero}
+          rightJSX={
+            <>
+              <Box
+                icon={
+                  <LamborghiniIcon
+                    height="24px"
+                    width="24px"
+                    mainColor="#fff"
+                  />
+                }
+                title="300mph"
+                description="Top Speed"
+              />
+              <Box
+                icon={
+                  <LamborghiniIcon
+                    height="24px"
+                    width="24px"
+                    mainColor="#fff"
+                  />
+                }
+                title="3472lbs"
+                description="Weight"
+              />
+              <Box
+                icon={
+                  <LamborghiniIcon
+                    height="24px"
+                    width="24px"
+                    mainColor="#fff"
+                  />
+                }
+                title="100L"
+                description="Range"
+              />
+              <Box
+                icon={
+                  <LamborghiniIcon
+                    height="24px"
+                    width="24px"
+                    mainColor="#fff"
+                  />
+                }
+                title="1.99s"
+                description="0-60mph"
+              />
+            </>
+          }
+          leftJSX={
+            <>
+              <div
+                style={{
+                  padding: "4px 16px",
+                  borderRadius: "8px",
+                  background: "#000",
+                  display: "flex",
+                  width: "fit-content",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                No Electric car
+              </div>
+              <p style={{ fontSize: "64px" }}>Lamborghini</p>
+              <p style={{ fontSize: "64px", fontWeight: "bold" }}>Aventador</p>
+              <p>Do want to try the fastest car on earth?</p>
+              <p>Join us and let`s build this car together</p>
+              <p style={{ fontWeight: "300", display: "flex", gap: "8px" }}>
+                From <span style={{ fontWeight: "bold" }}>3.5M$</span>
+              </p>
+              <div
+                style={{
+                  background: "#FC9303",
+                  padding: "8px 16px",
+                  display: "flex",
+                  width: "fit-content",
+                  borderRadius: "8px",
+                  gap: "4px",
+                  cursor: "pointer",
+                }}
+              >
+                <BuildIcon height="20px" width="20px" mainColor="#fff" />{" "}
+                <p style={{ fontSize: "18px", fontWeight: "700" }}>
+                  Build your own Lambo
+                </p>
+              </div>
+            </>
+          }
         />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
+        <DesktopHero img={lamborghiniGarage} rightJSX={
+            <></>
+          }
+          leftJSX={
+            <>
+              <div
+                style={{
+                  padding: "4px 16px",
+                  borderRadius: "8px",
+                  background: "#000",
+                  display: "flex",
+                  width: "fit-content",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                Fastest car
+              </div>
+              <p style={{ fontSize: "64px", fontWeight: 'bold' }}>YOLO</p>
+              <p>You can&apos;t drive under 140mph</p>
+              <p>Let&apos;s drive together</p>
+              <p style={{ fontWeight: "300", display: "flex", gap: "8px" }}>
+                From <span style={{ fontWeight: "bold" }}>10.000$/Race</span>
+              </p>
+              <div
+                style={{
+                  background: "#A10500",
+                  padding: "8px 16px",
+                  display: "flex",
+                  width: "fit-content",
+                  borderRadius: "8px",
+                  gap: "8px",
+                  cursor: "pointer",
+                }}
+              >
+                <BullIcon height="24px" width="24px" mainColor="#fff" />{" "}
+                <p style={{ fontSize: "18px", fontWeight: "700" }}>
+                  Unleash the BEAST inside of you
+                </p>
+              </div>
+            </>
+          } />
+        <DesktopHero img={lamborghiniBack} rightJSX={
+            <></>
+          }
+          leftJSX={
+            <>
+              <div
+                style={{
+                  padding: "4px 16px",
+                  borderRadius: "8px",
+                  background: "#000",
+                  display: "flex",
+                  width: "fit-content",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                Advanced Driving experience
+              </div>
+              <p style={{ fontSize: "64px",  }}>Professional</p>
+              <p style={{ fontSize: "64px", fontWeight: "bold" }}>DRIVER ONLY</p>
+              <p>The only way to beat Hamilton</p>
+              <p>Buy 1 get 1 Free</p>
+              <p style={{ fontWeight: "300", display: "flex", gap: "8px" }}>
+                <span style={{ fontWeight: "bold" }}>1.5M$</span> OFF
+              </p>
+              <div
+                style={{
+                  background: "#000",
+                  padding: "8px 16px",
+                  display: "flex",
+                  width: "fit-content",
+                  borderRadius: "8px",
+                  gap: "4px",
+                  cursor: "pointer",
+                }}
+              >
+                <RocketIcon height="20px" width="20px" mainColor="#fff" />{" "}
+                <p style={{ fontSize: "18px", fontWeight: "700" }}>
+                  Drive a ROCKET without a driving licence
+                </p>
+              </div>
+            </>
+          } />
+        
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </>
+  );
 }

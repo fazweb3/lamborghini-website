@@ -21,6 +21,7 @@ export default function Home() {
       <div
         style={{
           height: "100vh",
+          maxHeight: "-webkit-fill-available",
           overflowY: "scroll",
           scrollSnapType: "y mandatory",
         }}
